@@ -8,6 +8,6 @@
 
 ### Output:
 
-> "Th-Th-This i-is A s-s-sentence!"
+> "Th-Th-This i-is a s-s-sentence!"
 
 #### Link: https://www.npmjs.com/package/stutterify
