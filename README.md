@@ -15,4 +15,4 @@
 
 > "T-This I-Is A S-Sentence!"
 
-#### (Randomly Generated!)
+#### Link: https://www.npmjs.com/package/stutterify
