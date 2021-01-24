@@ -1,6 +1,6 @@
 {
      "name": "stutterify",
-     "version": "1.2.4",
+     "version": "1.2.5",
      "description": "Changes a string so that it will stutter.",
      "license": "MIT",
      "main": "index.js",
