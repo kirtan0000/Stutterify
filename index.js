@@ -4,6 +4,7 @@ module.exports = function stutterify(string) {
 
     string.split(" ").forEach(item => {
 
+    if(item.match(/[a-z]/i)) {
         if (Math.random() < 0.7) {
 
             if (Math.random() < 0.37) {
@@ -18,7 +19,7 @@ module.exports = function stutterify(string) {
 
         } else {
 
-            if (item != string.split(",")[string.length]) {
+            if (item != string.split(" ")[string.length]) {
 
                 str = item + " ";
 
@@ -33,8 +34,12 @@ module.exports = function stutterify(string) {
 
         }
 
+    } else {
 
+        sent += item;
+
+    }
 
     })
-    return sent;
+    return sent.replace(/\s*$/,"");;
 };
