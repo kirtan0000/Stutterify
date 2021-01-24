@@ -2,14 +2,16 @@ module.exports = function stutterify(string, prob_stutter = 0.7, prob_length = 0
     var sent = "";
     var str = "";
 
-    const stutter_initial = (word, count) => {
-        var first_char = word.substr(0, 1);
-        var stutter_char = "";
+    const stutter_word = (word, count) => {
+        const stutter_length = Math.max(1, word.match(/[aiueo]/i).index);
+        const stutter_part = word.substr(0, stutter_length);
+        var result = "";
 
         for (var i = 0; i < count; i++) 
-            stutter_char += first_char + "-";
+            result += stutter_part + "-";
+        result += word;
 
-        return stutter_char + word;
+        return result;
     }
 
     string.split(" ").forEach(item => {
@@ -19,11 +21,11 @@ module.exports = function stutterify(string, prob_stutter = 0.7, prob_length = 0
 
             if (Math.random() < prob_length) {
 
-                str = stutter_initial(item, 2) + " ";
+                str = stutter_word(item, 2) + " ";
 
             } else {
 
-                str = stutter_initial(item, 1) + " ";
+                str = stutter_word(item, 1) + " ";
 
             }
             sent += str;
