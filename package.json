@@ -4,6 +4,7 @@
      "description": "Changes a string so that it will stutter.",
      "license": "MIT",
      "main": "index.js",
+     "repository": "kirtan0000/Stutterify",
      "keywords": [
           "stutter",
           "npm",
