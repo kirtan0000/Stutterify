@@ -1,0 +1,13 @@
+{
+     "name": "stutterify",
+     "version": "1.2.2",
+     "description": "Changes a string so that it will stutter.",
+     "license": "MIT",
+     "main": "index.js",
+     "keywords": [
+          "stutter",
+          "npm",
+          "package",
+          "stutterify"
+     ]
+}
