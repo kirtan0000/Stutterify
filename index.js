@@ -4,9 +4,16 @@ module.exports = function stutterify(string) {
 
     string.split(" ").forEach(item => {
 
-        if (Math.random() < 0.73) {
+        if (Math.random() < 0.7) {
 
-            str = item.substr(0, 1).toUpperCase() + "-" + item.substr(0, 1).toUpperCase() + item.substr(1, item.length) + " ";
+            if (Math.random() < 0.37) {
+
+                str = item.substr(0, 1).toUpperCase() + "-" + item.substr(0, 1).toUpperCase() + "-" + item.substr(0, 1).toUpperCase() + item.substr(1, item.length) + " ";
+
+            } else {
+                str = item.substr(0, 1).toUpperCase() + "-" + item.substr(0, 1).toUpperCase() + item.substr(1, item.length) + " ";
+
+            }
             sent += str;
 
         } else {
